@@ -9,7 +9,7 @@ else
 master_class
 fi
 
-master_class {
+function master_class {
 KBreportedSize=$(df -k $1 | tail -1 | awk '{print $4}')
 reportedSize=$(($KBreportedSize * 1024))
 maxAllowedSize=1099511627776
