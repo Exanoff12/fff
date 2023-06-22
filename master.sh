@@ -3,12 +3,6 @@
 echo "Flash Checker v0.1 beta"
 echo "copyright - 2023 - Erik (AKPR)"
 
-if [ ! $1 ]; then
-echo "usage: ./fc <mounted drive path>"
-else
-master_class
-fi
-
 function master_class {
 KBreportedSize=$(df -k $1 | tail -1 | awk '{print $4}')
 reportedSize=$(($KBreportedSize * 1024))
@@ -20,3 +14,10 @@ else
 echo "continue"
 fi
 }
+
+
+if [ ! $1 ]; then
+echo "usage: ./fc <mounted drive path>"
+else
+master_class
+fi
