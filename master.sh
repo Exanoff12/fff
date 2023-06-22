@@ -4,7 +4,7 @@ echo "Flash Checker v0.1 beta"
 echo "copyright - 2023 - Erik (AKPR)"
 
 function master_class {
-KBreportedSize=$(df -k $1 | tail -1 | awk '{print $4}')
+KBreportedSize=$(df -k $1 | tail -1 | awk '{print $2}')
 reportedSize=$(($KBreportedSize * 1024))
 maxAllowedSize=1099511627776
 
