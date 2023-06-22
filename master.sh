@@ -7,3 +7,5 @@ if [ ! $1 ] then
 echo "usage: ./fc <mounted drive path>"
 fi
 
+KBreportedSize=$(df -k $1 | tail -1 | awk '{print $4}')
+reportedSize=$(($KBreportedSize * 1024))
